@@ -1,12 +1,14 @@
 package com.Sanketh.LibraryManagmentSystem.Controller;
 
-import com.Sanketh.LibraryManagmentSystem.Rerpository.BooksRepository;
+import com.Sanketh.LibraryManagmentSystem.Service.BooksService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class BooksController {
-    private final BooksRepository booksRepository;
+   private final BooksService booksService;
 
-    public BooksController(BooksRepository booksRepository) {
-        this.booksRepository = booksRepository;
+
+    public BooksController(BooksService booksService) {
+        this.booksService = booksService;
     }
-
 }

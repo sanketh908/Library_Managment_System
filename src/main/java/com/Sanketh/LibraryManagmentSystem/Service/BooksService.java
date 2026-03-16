@@ -6,6 +6,7 @@ import com.Sanketh.LibraryManagmentSystem.Rerpository.BooksRepository;
 import java.util.List;
 
 public interface BooksService {
+    public Books saveBooks(Books books);
     public List<Books> findAllBooks();
     public Books findBooksById(Integer id);
     public Books updateBooksById(Integer id, Books books);
