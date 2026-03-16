@@ -61,21 +61,21 @@ public class BooksServiceImpl implements BooksService {
 
     @Override
     public List<Books> findAllBooksByAuthor(String author) {
-        return List.of();
+     return findAllBooksByAuthor(author);
     }
 
     @Override
-    public List<Books> findAllBooksByPublisher(String genre) {
-        return List.of();
+    public List<Books> findAllBooksByPublisher(String genre){
+        return  findAllBooksByPublisher(genre);
     }
 
     @Override
     public List<Books> findAllBooksByCategory(String genre) {
-        return List.of();
+        return   findAllBooksByCategory(genre);
     }
 
     @Override
-    public List<Books> findAllBooksByPublished_date(String genre, String category) {
+    public List<Books> findAllBooksByPublished_date( String category) {
         return List.of();
     }
 }

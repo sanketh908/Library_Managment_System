@@ -11,11 +11,11 @@ public interface BooksService {
     public Books findBooksById(Integer id);
     public Books updateBooksById(Integer id, Books books);
 
-    public  void deleteBooksById(Integer id);
+    public boolean deleteBooksById(Integer id);
 
     public List<Books> findAllBooksByAuthor(String author);
     public List<Books> findAllBooksByPublisher(String genre);
 
     public List<Books> findAllBooksByCategory(String genre);
-    public List<Books> findAllBooksByPublished_date(String genre, String category);
+    public List<Books> findAllBooksByPublished_date( String category);
 }
