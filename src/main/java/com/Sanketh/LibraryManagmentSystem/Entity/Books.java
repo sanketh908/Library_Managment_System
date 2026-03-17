@@ -2,12 +2,12 @@ package com.Sanketh.LibraryManagmentSystem.Entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.data.relational.core.mapping.Table;
+
 
 import java.time.LocalDate;
 @Data
 @Entity
-@Table("books")
+@Table (name = "books")
 public class Books {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

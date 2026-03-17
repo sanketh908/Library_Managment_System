@@ -2,11 +2,12 @@ package com.Sanketh.LibraryManagmentSystem.Service;
 
 import com.Sanketh.LibraryManagmentSystem.Entity.Books;
 import com.Sanketh.LibraryManagmentSystem.Rerpository.BooksRepository;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class BooksServiceImpl implements BooksService {
     private final  BooksRepository booksRepository;
 
