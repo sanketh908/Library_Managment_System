@@ -3,7 +3,7 @@ package com.Sanketh.LibraryManagmentSystem.Service;
 import com.Sanketh.LibraryManagmentSystem.Entity.Books;
 import com.Sanketh.LibraryManagmentSystem.Rerpository.BooksRepository;
 
-import java.awt.print.Book;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -61,21 +61,45 @@ public class BooksServiceImpl implements BooksService {
 
     @Override
     public List<Books> findAllBooksByAuthor(String author) {
-     return findAllBooksByAuthor(author);
+        Optional<List<Books>> books = booksRepository.findAllBooksByAuthor(author);
+        if(books.isPresent()){
+            return books.get();
+        }
+        else {
+            return null;
+        }
     }
 
     @Override
     public List<Books> findAllBooksByPublisher(String genre){
-        return  findAllBooksByPublisher(genre);
+        Optional<List<Books>> books = booksRepository.findAllBooksByPublisher(genre);
+        if(books.isPresent()){
+            return books.get();
+        }
+        else {
+            return null;
+        }
     }
 
     @Override
-    public List<Books> findAllBooksByCategory(String genre) {
-        return   findAllBooksByCategory(genre);
+    public  List<Books> findAllBooksByCategory(String genre) {
+        Optional<List<Books>> books = booksRepository.findAllBooksByCategory(genre);
+        if(books.isPresent()){
+            return books.get();
+        }
+        else {
+            return null;
+        }
     }
 
     @Override
-    public List<Books> findAllBooksByPublished_date( String category) {
-        return List.of();
+    public List<Books> findAllBooksByPublished_date(LocalDate published_date) {
+        Optional<List<Books>> books= booksRepository.findAllBooksPublishedDate(published_date);
+        if(books.isPresent()){
+            return books.get();
+        }
+        else {
+            return  null;
+        }
     }
 }
